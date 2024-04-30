@@ -3,16 +3,20 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Index - SessionApp</title>
-        <%@include file="WEB-INF/jspf/html-head-libs.jspf" %>
+        <title>Página Inicial</title>
+        <%@include file="WEB-INF/jspf/html-head-libs.jspf"%>
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/navbar.jspf" %>
+        <%@include file="WEB-INF/jspf/navbar.jspf"%>
+        <%if(username != null){%>
         <div class="m-2">
-            <h2>Homer Page</h2>
-            <div>Page Content</div>
+            <h1>Página Inicial</h1>
+            <div>
+                <a href="nycolas.json" target='_blank'>Meus dados e matérias em curso</a><br>
+                <a href="disciplinas.jsp" target='_blank'>Apenas minhas matérias em curso</a>
+            </div>
         </div>
-        
-        <%@include file="WEB-INF/jspf/html-body-libs.jspf" %>
+        <%}%>
+        <%@include file="WEB-INF/jspf/html-body-libs.jspf"%>
     </body>
 </html>
